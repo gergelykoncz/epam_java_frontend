@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<section>
+    <h2>Datalist example</h2>
+    <form>
+        Choose an animal: <input list="animals" name="animal">
+
+        <datalist id="animals">
+            <option>Housecat</option>
+            <option>Lion</option>
+            <option>Tiger</option>
+            <option>Dog</option>
+            <option>Wolf</option>
+            <option>Fox</option>
+        </datalist>
+    </form>
+</section>
+
+<section>
+    <h2>Output example</h2>
+    <form oninput="result.value = parseInt(a.value) + parseInt(b.value)">
+        <input type="number" name="a" value="10">
+        <input type="number" name="b" value="10">
+        <output name="result">20</output>
+    </form>
+</section>
+
+<section>
+    <h2>Time examples</h2>
+    Date <input type="date">
+    <br>
+    Date time <input type="datetime">
+    <br>
+    Month <input type="month">
+    <br>
+    Week <input type="week">
+</section>
+
+<section>
+    <form>
+        <h2>New control types</h2>
+        Email: <input type="email">
+        <br>
+        Telephone: <input type="tel">
+        <br>
+        Search: <input type="search">
+        <input type="submit">
+    </form>
+</section>
+</body>
+</html>
