@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>EPAM Java Academy - Frontend Notes</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+</head>
+<body class="container">
+<header>
+    <nav class="navbar navbar-default">
+        <ul class="nav navbar-nav">
+            <li><a href="#doctype">DOCTYPE</a></li>
+            <li><a href="#html">HTML</a></li>
+            <li><a href="#html">Head</a></li>
+        </ul>
+    </nav>
+</header>
+
+<main>
+    <h1>Frontend notes for EPAM Java Academy</h1>
+
+    <section id="doctype">
+        <p>HTML stands for HyperText Markup Language. Kind of a tautology, but it's a markup language describing web
+            documents.</p>
+
+        <hr>
+        <h3>Markup of an HTML page</h3>
+        <h4>DOCTYPE declaration</h4>
+        <p>All HTML documents MUST start with a <code>DOCTYPE</code> declaration. Omitting it is considered an error,
+            and
+            the browser enters into quirks mode.</p>
+        <p>The <code>DOCTYPE</code> declaration tells the user agent (typically the browser) what kind of document is
+            being
+            rendered.</p>
+        <p>There are a bunch of different <code>DOCTYPE</code> declarations, here are some:</p>
+        <figure>
+            <figcaption>XHTML 1.1</figcaption>
+            <code>&lt;!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN"
+                "http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd"&gt;</code>
+        </figure>
+
+        <figure>
+            <figcaption>HTML5</figcaption>
+            <code>&lt;!DOCTYPE html&gt;</code>
+        </figure>
+
+        <p>As visible from the figure above, HTML5 greatly simplified the way DOCTYPE declarations look.</p>
+        <hr>
+    </section>
+    <section id="html">
+        <h4>Html tag</h4>
+        <p>After DOCTYPE, your page should have an <code>HTML</code> tag. It describes the web page.</p>
+        <p>Notice the word <i>tag</i> above. HTML is built from a tree of tags - called the <strong>Document Object
+            Model</strong> or <strong>DOM</strong>. These tags, forming a tree, are defining the markup and semantic
+            meaning
+            of your document.</p>
+        <p>Each tag (or node of the tree) can have zero or more attributes. For example defining a link looks like as
+            follows:</p>
+        <figure>
+            <figcaption>A hyperlink</figcaption>
+            <code>&lt;a href="http://google.com"&gt;Google.com&lt;/a&gt;</code>
+        </figure>
+        <p>Notice the href property above, called an attribute in HTML.</p>
+        <hr>
+    </section>
+    <section id="head">
+        <h4>Head tag</h4>
+        <p>The <code>head</code> tag stores metadata about your document, such as its title, information for search
+            engines,
+            etc. Note that this metadata is not displayed on your page. The <code>head</code> can also include style and
+            script references. </p>
+        <p>The <code>head</code> tag can contain the following types of tags:</p>
+        <dl>
+            <dt>Meta</dt>
+            <dd><p>Used for providing metadata about the site. It can have various attributes, such as
+                <code>http-equiv</code>, which is interpreted as an HTTP header.</p>
+                <p>Meta is also used for SEO (e.g. keywords, description content), and social media (OG protocol).</p>
+            </dd>
+            <dt>Title</dt>
+            <dd><p>The <code>title</code> attribute can contain only text, and is displayed in the title bar, tabs, etc.
+                It
+                should show the title of the document.</p></dd>
+            <dt>Stylesheets</dt>
+            <dd><p>Stylesheets can be included using the <code>&lt;link rel="stylesheet" href="style.css"&gt;</code>
+                fragment.</p>
+                <p>You can also use inline styles using the <code>style</code> tag.</p></dd>
+            <dt>Script</dt>
+            <dd>You can include inline scripts or script file references by using the <code>script</code> tag. However,
+                <code>script</code> tags are not restricted to the head section. You can use them anywhere in an HTML
+                document.
+            </dd>
+        </dl>
+        <hr>
+    </section>
+    <section id="body">
+        <h4>Body tag</h4>
+        <p>The body tag is the visible content of your page. It can contain zero or more HTML tags. The rest of this
+            page
+            shows what are the most common HTML tags.</p>
+        <hr>
+    </section>
+    <section id="headings">
+        <h4>Headings</h4>
+        <p>You can define several headings in HTML. There are six of them, from <code>&lt;h1&gt;</code> to <code>
+            &lt;h6&gt;</code>,
+            <code>&lt;h1&gt;</code> being the largest, most prominent one. Here's how they're rendered:</p>
+        <hgroup>
+            <h1>H1 header</h1>
+            <h2>H2 header</h2>
+            <h3>H3 header</h3>
+            <h4>H4 header</h4>
+            <h5>H5 header</h5>
+            <h6>H6 header</h6>
+        </hgroup>
+        <p>You'd typically use one <code>h1</code> header on your page.</p>
+        <hr>
+    </section>
+    <section id="emphasis">
+        <h4>Emphasis</h4>
+        <p>There are several tags in HTML to put emphasis on something, here they are as follows:</p>
+        <dl>
+            <dt>b</dt>
+            <dd>The HTML <code>&lt;b&gt;</code> Element represents a span of text stylistically different from normal
+                text, without conveying any special importance or relevance.
+            </dd>
+            <dt>strong</dt>
+            <dd>Strong is used to give text <strong>strong</strong> importance, so it's not just a stylistic difference.
+            </dd>
+            <dt>i</dt>
+            <dd>The <code>i</code> element is used to differentiate text from the surrounding contents, like a name of
+                something, a foreign word, etc.
+            </dd>
+            <dt>em</dt>
+            <dd>The <code>em</code> tag is used to give <em>some</em> importance, or emphasis to its contents.</dd>
+        </dl>
+        <hr>
+    </section>
+    <section id="lists">
+        <h4>Lists</h4>
+        <p>There are three types of lists in HTML. <code>ul</code> represents an unordered, <code>ol</code> an ordered
+            and <code>dl</code> a description list.</p>
+        <p>Adding list items is done by the <code>li</code> element.</p>
+        <p>An unordered list example:</p>
+        <ul>
+            <li>Item 1</li>
+            <li>Item 2</li>
+        </ul>
+
+        <p>An ordered list example:</p>
+        <ol>
+            <li>Item 1</li>
+            <li>Item 2</li>
+        </ol>
+
+        <p>A description list example:</p>
+        <dl>
+            <dt>Item 1</dt>
+            <dd>Item 1 is about...</dd>
+            <dt>Item 2</dt>
+            <dd>Item 2 is about...</dd>
+        </dl>
+        <hr>
+    </section>
+    <section id="divs">
+        <h4>divs</h4>
+        <p><code>div</code> or the division element is used to slice up a page without any semantic information.
+            Essentially it's just a content holder.</p>
+        <p>If you have an element with a specific task, <strong>use a semantic equivalent instead</strong>. E.g. if you
+            have a footer,
+            use the <code>footer</code> semantic tag instead of a div.</p>
+        <hr>
+    </section>
+</main>
+</body>
+</html>
