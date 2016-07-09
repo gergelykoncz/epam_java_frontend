@@ -7,6 +7,7 @@
 <body>
 <section>
     <h2>Datalist example</h2>
+    Using the new datalist, we can create autocomplete textboxes in pure HTML, without any JS code.
     <form>
         Choose an animal: <input list="animals" name="animal">
 
@@ -49,6 +50,21 @@
         Telephone: <input type="tel">
         <br>
         Search: <input type="search">
+        <input type="submit">
+    </form>
+</section>
+
+<section>
+    <form onsubmit="return false;">
+        <h2>New control attributes</h2>
+        The required attribute is used to make a field required, using HTML only.
+        <br>
+        Email: <input type="email" required>
+        <br>
+        The pattern attribute is used to create a regex-validated field. The following field only accepts a ZIP code.
+        <br>
+        ZIP: <input type="text" pattern="\d{4}">
+
         <input type="submit">
     </form>
 </section>

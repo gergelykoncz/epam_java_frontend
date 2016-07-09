@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>HTML5 CSS Base notes</title>
+    <link rel="stylesheet" href="index.css">
+</head>
+<body>
+
+<main>
+
+    <section>
+        <h1>HTML5 CSS Base notes</h1>
+        <p>Cascading Style Sheets is a technology used to format HTML markup</p>
+        <ul>
+            <li>Cascading (or inheritance) means that CSS rules can be inherited from the <strong>DOM parent
+                nodes</strong>.
+            </li>
+            <li>Every HTML element is addressable with a sophisticated enough CSS rule.</li>
+            <li>For making it easier, CSS supports classes with the <strong>.className</strong> notation.</li>
+            <li>It also supports DOM IDs, with the <strong>#id</strong> notation.</li>
+        </ul>
+    </section>
+    <section>
+        <h2>Syntax</h2>
+        <p>A CSS rule consists of two parts, a selector and a declaration block.</p>
+<pre>
+    .myRule {
+        font-weight: bold;
+        color: red;
+    }
+</pre>
+    </section>
+    <section>
+        <h2>Specificity</h2>
+        <p>CSS rules have specificity. This means that the relevance of a rule is dependent on where it is defined. The
+            specificity is as follows, <strong>from weakest to strongest:</strong></p>
+        <ol>
+            <li>User agent default stylesheet</li>
+            <li>Internal/external CSS</li>
+            <li>Inline CSS (attached to specific DOM elements via HTML attributes)</li>
+            <li>!important rules</li>
+        </ol>
+    </section>
+    <section>
+        <h2>Box model</h2>
+        <p>Every DOM element is rendered as a rectangle. This rectangle has the following boundaries:</p>
+        <ol>
+            <li>The DOM content itself</li>
+            <li>A padding</li>
+            <li>A border</li>
+            <li>A margin</li>
+        </ol>
+        <p>The following element is a div illustrating this:</p>
+        <div class="box-model">
+            <ul>
+                <li>My width is 200px, my height is 200px</li>
+                <li>My padding is 20px</li>
+                <li>My border is 5px and black</li>
+                <li>My margin is 20px</li>
+            </ul>
+        </div>
+        <p>The above div's height thus takes 290px screen real estate.</p>
+    </section>
+    <section>
+        <h2>Inline vs block elements</h2>
+        <p>There are two main kinds of CSS elements:</p>
+        <dl>
+            <dt>Block elements</dt>
+            <dd>They have a line-break before and after, and take all horizontal space of their parent. A div is a block
+                element for example.
+                Their width and height can be controlled by the relevant CSS properties.
+            </dd>
+
+            <dt>Inline elements</dt>
+            <dd>Inline elements are rendered in-line, without any line-break. Their size is dependent on their content.
+                A span is a block element.
+            </dd>
+        </dl>
+        <div class="block">
+            I'm a block div!
+            <span class="inline">I'm an inline span</span>
+        </div>
+
+        <p>These can be controlled by the display property. The three most important values are:</p>
+        <ul>
+            <li>Block: displays an element as block.</li>
+            <li>Inline: displays an element as inline.</li>
+            <li>None: completely hides an element.</li>
+        </ul>
+    </section>
+    <section>
+        <h2>Positioning</h2>
+        <p>We can position HTML elements with CSS. This can be controlled by the <strong>position</strong> property, and
+            the left, right, top, bottom properties.</p>
+        <dl>
+            <dt>static</dt>
+            <dd>The element is positioned as it is in the DOM. This is the default value.</dd>
+            <dt>relative</dt>
+            <dd>The element is positioned relative to its DOM position.</dd>
+            <dt>absolute</dt>
+            <dd>The element is positioned relative its first parent which is not static.</dd>
+            <dt>absolute</dt>
+            <dd>The element is positioned relative to the viewport.</dd>
+        </dl>
+
+    </section>
+</main>
+</body>
+</html>
